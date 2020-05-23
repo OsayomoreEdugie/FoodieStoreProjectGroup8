@@ -1,0 +1,48 @@
+
+.mybutton {
+    -fx-graphic: url("../Images/Exit.png")
+}
+.mybutton2 {
+-fx-graphic: url("../Images/Personicon.png");
+ -fx-background-color: linear-gradient(to top, #C71585	, #A52A2A);
+
+}
+
+.mybutton4 {
+-fx-graphic: url("../Images/Cart.png");
+ -fx-background-color: linear-gradient(to top, #C71585	, #A52A2A);
+
+}
+
+.mybutton3 {
+-fx-graphic: url("../Images/Menuicon.png");
+ -fx-background-color: linear-gradient(to top, #C71585	, #A52A2A);
+}
+.mybutton5 {
+-fx-graphic: url("../Images/Carticons.png");
+ -fx-background-color: linear-gradient(to top, #C71585	, #A52A2A);
+}
+
+.mybutton6 {
+-fx-graphic: url("../Images/Carticon.png");
+ -fx-background-color: linear-gradient(to top, #C71585	, #A52A2A);
+}
+
+.HomePage-bg{
+     -fx-background-color: linear-gradient(to top, #C71585	, #A52A2A);
+}
+.HomePage-backgroundchef{
+     -fx-background-color: linear-gradient(to top,#C71585 ,#FF4500	, 	#A52A2A);
+}
+.button:hover{
+-fx-background-color : #10165F;
+}
+.button:pressed
+{
+-fx-background-color : #1620A1;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
