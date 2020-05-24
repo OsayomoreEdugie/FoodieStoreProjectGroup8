@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.*?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="608.0" prefWidth="908.0" xmlns="http://javafx.com/javafx/8.0.171"
+      fx:controller="ControllerPackage.AdminController">
+    <children>
+        <StackPane fx:id="stackPane"/>
+        <Pane prefHeight="608.0" prefWidth="908.0" styleClass="HomePage-bg"
+              stylesheets="@../ControllerPackage/Style.css">
+            <children>
+                <ScrollPane layoutX="102.0" layoutY="285.0" prefHeight="285.0" prefWidth="704.0">
+                    <content>
+                        <TableView fx:id="adminTable" prefHeight="283.0" prefWidth="702.0">
+                            <columns>
+                                <TableColumn fx:id="nameColumn" prefWidth="154.0" text="Name"/>
+                                <TableColumn fx:id="priceColumn" prefWidth="139.0" text="Price"/>
+                                <TableColumn fx:id="typeColumn" prefWidth="228.0" text="Type"/>
+                                <TableColumn fx:id="isAvaliableColumn" prefWidth="179.0" text="isAvaliable"/>
+                            </columns>
+                        </TableView>
+                    </content>
+                </ScrollPane>
+                <Pane layoutX="102.0" layoutY="62.0" prefHeight="176.0" prefWidth="704.0">
+                    <children>
+                        <Button fx:id="addButton" layoutX="271.0" layoutY="115.0" mnemonicParsing="false"
+                                onAction="#handleAddButton" prefHeight="39.0" prefWidth="177.0"
+                                style="-fx-background-color: grey;" text="Add/Update" textFill="#fffefe">
+                            <font>
+                                <Font name="System Bold Italic" size="18.0"/>
+                            </font>
+                        </Button>
+                        <Label layoutX="69.0" layoutY="62.0" prefHeight="28.0" prefWidth="70.0" text="Name"
+                               textAlignment="RIGHT" textFill="WHITE">
+                            <font>
+                                <Font name="Comic Sans MS Bold" size="14.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="priceTextField" layoutX="458.0" layoutY="23.0" prefHeight="25.0"
+                                   prefWidth="177.0" promptText="Item Name"/>
+                        <Label layoutX="359.0" layoutY="22.0" prefHeight="28.0" prefWidth="70.0" text="Price"
+                               textAlignment="RIGHT" textFill="WHITE">
+                            <font>
+                                <Font name="Comic Sans MS Bold" size="14.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="69.0" layoutY="22.0" prefHeight="28.0" prefWidth="70.0" text="Type"
+                               textFill="WHITE">
+                            <font>
+                                <Font name="Comic Sans MS Bold" size="14.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="amountTextField" layoutX="458.0" layoutY="63.0" prefHeight="25.0"
+                                   prefWidth="177.0" promptText="Amount of Product"/>
+                        <Label layoutX="359.0" layoutY="62.0" prefHeight="28.0" prefWidth="70.0" text="AMOUNT"
+                               textAlignment="RIGHT" textFill="WHITE">
+                            <font>
+                                <Font name="Comic Sans MS Bold" size="14.0"/>
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="typrComoboBox" layoutX="168.0" layoutY="23.0" onAction="#ActionOFtype"
+                                  prefHeight="25.0" prefWidth="177.0" promptText="Select"/>
+                        <ComboBox fx:id="NameComboBox" layoutX="168.0" layoutY="63.0" prefHeight="25.0"
+                                  prefWidth="177.0" promptText="Select"/>
+                    </children>
+                </Pane>
+                <ComboBox fx:id="filterComoboBox1" layoutX="102.0" layoutY="238.0" onAction="#handleUpdateButton"
+                          prefHeight="25.0" prefWidth="161.0" promptText="Food Filter"/>
+            </children>
+        </Pane>
+    </children>
+</Pane>

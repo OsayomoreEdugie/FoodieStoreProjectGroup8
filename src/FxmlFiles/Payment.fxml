@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="608.0" prefWidth="908.0" xmlns="http://javafx.com/javafx/8.0.171"
+      fx:controller="ControllerPackage.PaymentController">
+    <children>
+        <StackPane fx:id="stackPane" prefHeight="608.0" prefWidth="908.0">
+            <children>
+                <Pane prefHeight="200.0" prefWidth="200.0" styleClass="HomePage-bg"
+                      stylesheets="@../ControllerPackage/Style.css">
+                    <children>
+                        <Label fx:id="totalPrice" layoutX="167.0" layoutY="531.0"/>
+                        <Button fx:id="confirmationButton" layoutX="633.0" layoutY="524.0" mnemonicParsing="false"
+                                onAction="#checkOutButton" prefHeight="48.0" prefWidth="136.0"
+                                style="-fx-background-color: #3e919e;" text="Confirm Order" textFill="#f5f8f8"/>
+                        <Button fx:id="cartDeleteButton" layoutX="813.0" layoutY="524.0" mnemonicParsing="false"
+                                onAction="#deleteFromShopCartList" prefHeight="48.0" prefWidth="81.0"
+                                styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css" text="Cancle"
+                                textFill="#f5f0f0"/>
+                        <ImageView fitHeight="341.0" fitWidth="387.0" layoutX="507.0" layoutY="142.0"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Images/FoodieLogo.png"/>
+                            </image>
+                            <effect>
+                                <InnerShadow/>
+                            </effect>
+                        </ImageView>
+                    </children>
+                </Pane>
+            </children>
+        </StackPane>
+        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="588.0" prefWidth="499.0" styleClass="HomePage-bg"
+                    stylesheets="@../ControllerPackage/Style.css">
+            <children>
+                <ScrollPane layoutX="9.0" layoutY="57.0" prefHeight="450.0" prefWidth="487.0">
+                    <content>
+                        <TableView fx:id="cartTableView" prefHeight="448.0" prefWidth="484.0">
+                            <columns>
+                                <TableColumn fx:id="Name" prefWidth="211.0" text="ItemName"/>
+                                <TableColumn fx:id="Quantitty" prefWidth="130.0" text="Quantitty"/>
+                                <TableColumn fx:id="Price" prefWidth="142.0" text="Price(Sek)"/>
+                            </columns>
+                        </TableView>
+                    </content>
+                </ScrollPane>
+                <Label layoutX="167.0" layoutY="14.0" prefHeight="30.0" prefWidth="166.0" text="SHOPPING CART"
+                       textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="229.0" layoutY="531.0" prefHeight="25.0" prefWidth="104.0" text="Total Amount"
+                       textFill="#f5f5f5">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="subtotalLabel" layoutX="339.0" layoutY="527.0" prefHeight="33.0" prefWidth="104.0"
+                       style="-fx-border-color: Lightgrey;" textFill="#f5f5f5">
+                    <font>
+                        <Font name="System Bold" size="16.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="subtotalLabel1" layoutX="454.0" layoutY="527.0" prefHeight="33.0" prefWidth="36.0"
+                       text="SEK" textFill="#f5f5f5"/>
+            </children>
+        </AnchorPane>
+    </children>
+</Pane>
