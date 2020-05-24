@@ -60,6 +60,19 @@ public class DBUserQueries  {
             return false;
         }
     }
+    public void updateProducts(String name, String Price, String amount) {
+        String updatesql = "UPDATE  products SET AMMOUNT= ?, Price= ? WHERE NAME = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(updatesql)) {
+            System.out.println("testing steinf update 999");
+            preparedStatement.setString(1, amount);
+            preparedStatement.setString(2, Price);
+            preparedStatement.setString(3, name);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            AlertBox(e + "");
+        }
+    }
 
     public boolean isProductExist(String name) {
 
