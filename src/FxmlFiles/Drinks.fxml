@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<StackPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+           prefHeight="608.0" prefWidth="908.0" xmlns="http://javafx.com/javafx/8.0.171"
+           fx:controller="ControllerPackage.MenuItemsController">
+    <children>
+        <ScrollPane prefHeight="608.0" prefWidth="908.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="608.0" prefWidth="908.0"
+                            style="-fx-background-color: white;">
+                    <children>
+                        <SplitPane layoutX="47.0" layoutY="39.0" orientation="VERTICAL" prefHeight="236.0"
+                                   prefWidth="191.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                    <children>
+                                        <ImageView fitHeight="141.0" fitWidth="127.0" layoutX="29.0" pickOnBounds="true"
+                                                   preserveRatio="true">
+                                            <image>
+                                                <Image url="@../Images/SoftDrink1.PNG"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label alignment="CENTER" layoutX="28.0" layoutY="135.0" prefHeight="30.0"
+                                               prefWidth="134.0" text="Cola Zero">
+                                            <font>
+                                                <Font name="System Bold" size="16.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" layoutX="48.0" layoutY="165.0" prefHeight="17.0"
+                                               prefWidth="93.0" text="Price 10sek">
+                                            <font>
+                                                <Font size="11.0"/>
+                                            </font>
+                                        </Label>
+                                        <Button alignment="CENTER" layoutX="56.0" layoutY="195.0"
+                                                mnemonicParsing="false" onAction="#CZDrinkAddToCart"
+                                                styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css"
+                                                text="Add To Cart" textFill="#fcfafa"/>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                        <SplitPane layoutX="250.0" layoutY="39.0" orientation="VERTICAL" prefHeight="236.0"
+                                   prefWidth="191.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="172.0" prefWidth="110.0">
+                                    <children>
+                                        <ImageView fitHeight="117.0" fitWidth="196.0" layoutX="-2.0" layoutY="14.0"
+                                                   pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../Images/SoftDrink2.PNG"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label alignment="CENTER" layoutX="28.0" layoutY="135.0" prefHeight="30.0"
+                                               prefWidth="134.0" text="Fanta">
+                                            <font>
+                                                <Font name="System Bold" size="16.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" layoutX="48.0" layoutY="165.0" prefHeight="17.0"
+                                               prefWidth="93.0" text="Price 9sek">
+                                            <font>
+                                                <Font size="11.0"/>
+                                            </font>
+                                        </Label>
+                                        <Button alignment="CENTER" layoutX="56.0" layoutY="195.0"
+                                                mnemonicParsing="false" onAction="#FDrinkAddToCart"
+                                                styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css"
+                                                text="Add To Cart" textFill="#fcfafa"/>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                        <SplitPane layoutX="450.0" layoutY="39.0" orientation="VERTICAL" prefHeight="236.0"
+                                   prefWidth="191.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                    <children>
+                                        <ImageView fitHeight="143.0" fitWidth="181.0" layoutX="4.0" layoutY="3.0"
+                                                   pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../Images/SoftDrink3.PNG"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label alignment="CENTER" layoutX="28.0" layoutY="135.0" prefHeight="30.0"
+                                               prefWidth="134.0" text="Crush Lime">
+                                            <font>
+                                                <Font name="System Bold" size="16.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" layoutX="48.0" layoutY="165.0" prefHeight="17.0"
+                                               prefWidth="93.0" text="Price 7sek">
+                                            <font>
+                                                <Font size="11.0"/>
+                                            </font>
+                                        </Label>
+                                        <Button alignment="CENTER" layoutX="56.0" layoutY="195.0"
+                                                mnemonicParsing="false" onAction="#CLDrinkAddToCart"
+                                                styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css"
+                                                text="Add To Cart" textFill="#fcfafa"/>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                        <SplitPane layoutX="650.0" layoutY="39.0" orientation="VERTICAL" prefHeight="236.0"
+                                   prefWidth="191.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                    <children>
+                                        <ImageView fitHeight="138.0" fitWidth="165.0" layoutX="27.0" pickOnBounds="true"
+                                                   preserveRatio="true">
+                                            <image>
+                                                <Image url="@../Images/SoftDrink4.PNG"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label alignment="CENTER" layoutX="28.0" layoutY="135.0" prefHeight="30.0"
+                                               prefWidth="134.0" text="Pepsi">
+                                            <font>
+                                                <Font name="System Bold" size="16.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" layoutX="48.0" layoutY="165.0" prefHeight="17.0"
+                                               prefWidth="93.0" text="Price 10sek">
+                                            <font>
+                                                <Font size="11.0"/>
+                                            </font>
+                                        </Label>
+                                        <Button alignment="CENTER" layoutX="56.0" layoutY="195.0"
+                                                mnemonicParsing="false" onAction="#PDrinkAddToCart"
+                                                styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css"
+                                                text="Add To Cart" textFill="#fcfafa"/>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                        <SplitPane layoutX="47.0" layoutY="304.0" orientation="VERTICAL" prefHeight="236.0"
+                                   prefWidth="191.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                    <children>
+                                        <ImageView fitHeight="132.0" fitWidth="196.0" layoutX="30.0" pickOnBounds="true"
+                                                   preserveRatio="true">
+                                            <image>
+                                                <Image url="@../Images/SoftDrink6.PNG"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label alignment="CENTER" layoutX="28.0" layoutY="135.0" prefHeight="30.0"
+                                               prefWidth="134.0" text="7up">
+                                            <font>
+                                                <Font name="System Bold" size="16.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" layoutX="48.0" layoutY="165.0" prefHeight="17.0"
+                                               prefWidth="93.0" text="Price 7sek">
+                                            <font>
+                                                <Font size="11.0"/>
+                                            </font>
+                                        </Label>
+                                        <Button alignment="CENTER" layoutX="56.0" layoutY="195.0"
+                                                mnemonicParsing="false" onAction="#SupDrinkAddToCart"
+                                                styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css"
+                                                text="Add To Cart" textFill="#fcfafa"/>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                        <SplitPane layoutX="250.0" layoutY="304.0" orientation="VERTICAL" prefHeight="236.0"
+                                   prefWidth="191.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                    <children>
+                                        <ImageView fitHeight="132.0" fitWidth="196.0" layoutX="-2.0" layoutY="14.0"
+                                                   pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../Images/SoftDrink7.PNG"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label alignment="CENTER" layoutX="28.0" layoutY="135.0" prefHeight="30.0"
+                                               prefWidth="134.0" text="Sprite">
+                                            <font>
+                                                <Font name="System Bold" size="16.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" layoutX="48.0" layoutY="165.0" prefHeight="17.0"
+                                               prefWidth="93.0" text="Price 9sek">
+                                            <font>
+                                                <Font size="11.0"/>
+                                            </font>
+                                        </Label>
+                                        <Button alignment="CENTER" layoutX="56.0" layoutY="195.0"
+                                                mnemonicParsing="false" onAction="#SpriteDrinkAddToCart"
+                                                styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css"
+                                                text="Add To Cart" textFill="#fcfafa"/>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                        <SplitPane layoutX="450.0" layoutY="304.0" orientation="VERTICAL" prefHeight="236.0"
+                                   prefWidth="191.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                    <children>
+                                        <ImageView fitHeight="132.0" fitWidth="196.0" layoutX="-2.0" layoutY="-6.0"
+                                                   pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../Images/SoftDrink8.PNG"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label alignment="CENTER" layoutX="28.0" layoutY="135.0" prefHeight="30.0"
+                                               prefWidth="134.0" text="Coke">
+                                            <font>
+                                                <Font name="System Bold" size="16.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" layoutX="48.0" layoutY="165.0" prefHeight="17.0"
+                                               prefWidth="93.0" text="Price 10sek">
+                                            <font>
+                                                <Font size="11.0"/>
+                                            </font>
+                                        </Label>
+                                        <Button alignment="CENTER" layoutX="56.0" layoutY="195.0"
+                                                mnemonicParsing="false" onAction="#cokeDrinkAddToCart"
+                                                styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css"
+                                                text="Add To Cart" textFill="#fcfafa"/>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                        <SplitPane layoutX="650.0" layoutY="304.0" orientation="VERTICAL" prefHeight="236.0"
+                                   prefWidth="191.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                    <children>
+                                        <ImageView fitHeight="125.0" fitWidth="132.0" layoutX="29.0" layoutY="14.0"
+                                                   pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../Images/SoftDrink9.PNG"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label alignment="CENTER" layoutX="28.0" layoutY="135.0" prefHeight="30.0"
+                                               prefWidth="134.0" text="Loka">
+                                            <font>
+                                                <Font name="System Bold" size="16.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" layoutX="48.0" layoutY="165.0" prefHeight="17.0"
+                                               prefWidth="93.0" text="Price 7sek">
+                                            <font>
+                                                <Font size="11.0"/>
+                                            </font>
+                                        </Label>
+                                        <Button alignment="CENTER" layoutX="56.0" layoutY="195.0"
+                                                mnemonicParsing="false" onAction="#lokaDrinkAddToCart"
+                                                styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css"
+                                                text="Add To Cart" textFill="#fcfafa"/>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+    </children>
+</StackPane>
