@@ -20,7 +20,7 @@ public class MainMenuController extends Control {
 
     @FXML
     private void handleFoodsViewButton() {
-        newInterfaceChanges("Food");
+        newInterfaceChanges("BurgerAndPizzaMenu");
     }
 
 
