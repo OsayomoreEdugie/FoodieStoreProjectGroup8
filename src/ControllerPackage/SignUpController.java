@@ -45,13 +45,13 @@ public class SignUpController extends Control {
             boolean promptSave = true;
 
             if (promptSave) {
-                if (!emailValidation(email.getText())) {
+                if (!ValidationOfEmail(email.getText())) {
                     promptSave = false;
 
                 } else if (profileExceptionHandling.passwordLength(password.getText())) {
                     promptSave = false;
 
-                } else if (profileExceptionHandling.mobileNumberIsNotNumbers(mobile.getText())) {
+                } else if (profileExceptionHandling.mobileNumber(mobile.getText())) {
                     promptSave = false;
 
                 } else if (profileExceptionHandling.comboBoxes(city)) {
@@ -60,8 +60,7 @@ public class SignUpController extends Control {
                 } else promptSave = !profileExceptionHandling.datePChecker(birthday);
             }
 
-            if (promptSave) { // save user's info if they are correct
-
+            if (promptSave) {
 
                 java.util.Date date = java.util.Date.from(birthday.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());
                 java.sql.Date sqlDate = new java.sql.Date(date.getTime());
