@@ -8,7 +8,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class MenuItemsController extends Control {
+public class FoodController extends Control {
     DbFoodQueries dbFoodQueries=new DbFoodQueries();
     @Override
     public void initialize(URL location, ResourceBundle resources) {
