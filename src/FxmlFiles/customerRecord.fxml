@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="608.0" prefWidth="908.0" xmlns="http://javafx.com/javafx/8.0.171"
+      fx:controller="ControllerPackage.CustomerRecordController">
+    <children>
+        <StackPane fx:id="stackPane" prefHeight="608.0" prefWidth="908.0">
+            <children>
+                <Pane prefHeight="200.0" prefWidth="200.0" styleClass="HomePage-bg"
+                      stylesheets="@../ControllerPackage/Style.css">
+                    <children>
+                        <Label fx:id="totalPrice" layoutX="167.0" layoutY="531.0"/>
+                        <ImageView fitHeight="341.0" fitWidth="387.0" layoutX="507.0" layoutY="142.0"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Images/FoodieLogo.png"/>
+                            </image>
+                            <effect>
+                                <InnerShadow/>
+                            </effect>
+                        </ImageView>
+                    </children>
+                </Pane>
+            </children>
+        </StackPane>
+        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="588.0" prefWidth="499.0" styleClass="HomePage-bg"
+                    stylesheets="@../ControllerPackage/Style.css">
+            <children>
+                <ScrollPane layoutX="9.0" layoutY="57.0" prefHeight="450.0" prefWidth="487.0">
+                    <content>
+                        <TableView fx:id="recodTableView" prefHeight="448.0" prefWidth="484.0">
+                            <columns>
+                                <TableColumn fx:id="orderId" prefWidth="77.0" text="OrderId"/>
+                                <TableColumn fx:id="customerName" prefWidth="192.0" text="CustomerName"/>
+                                <TableColumn fx:id="purchaseDate" prefWidth="116.0" text="PurchaseDate"/>
+                                <TableColumn fx:id="amountPay" prefWidth="97.0" text="AmountPay"/>
+                            </columns>
+                        </TableView>
+                    </content>
+                </ScrollPane>
+                <Label layoutX="167.0" layoutY="14.0" prefHeight="30.0" prefWidth="166.0" text="Shopping Details"
+                       textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</Pane>
