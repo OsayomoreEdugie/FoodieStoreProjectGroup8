@@ -14,6 +14,8 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
 import java.io.IOException;
 
 public abstract class Control implements Initializable {
@@ -68,7 +70,8 @@ public abstract class Control implements Initializable {
             borderPane.setRight(null);
             if (Interface.equals("signUp"))
                 ((SignUpController) loader.getController()).setBorderPane(borderPane);
-
+            if (Interface.equals("MainMenu"))
+                ((MainMenuController) loader.getController()).setBorderPane(borderPane);
 
         } catch (IOException e) {
             AlertBox(e + "");
@@ -76,21 +79,20 @@ public abstract class Control implements Initializable {
     }
 
 
-    void createNewStage(ActionEvent event) {
+
+    boolean ValidationOfEmail(String email) {
         try {
-            Node node = (Node) event.getSource();
-            Stage stage = (Stage) node.getScene().getWindow();
-            FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fxmlFiles/homePage.fxml"));
-            Parent root = loader.load();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-
-
-        } catch (IOException e) {
-            AlertBox(e + "");
+            InternetAddress validemail = new InternetAddress(email);
+            validemail.validate();
+            return true;
+        } catch (AddressException ex) {
+            AlertBox(ex + "");
+            return false;
         }
+
     }
-
-
-
 }
+
+
+
+
