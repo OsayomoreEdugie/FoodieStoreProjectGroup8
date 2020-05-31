@@ -17,7 +17,7 @@
     <children>
         <BorderPane fx:id="borderPane" prefHeight="608.0" prefWidth="908.0" styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css">
             <top>
-                <Pane fx:id="upBar" onMouseDragged="#onUpBarDragged" onMousePressed="#onUpBarButtonPressed" prefHeight="33.0" prefWidth="1067.0" styleClass="HomePage-backgroundchef" stylesheets="@../ControllerPackage/Style.css" BorderPane.alignment="CENTER">
+                <Pane fx:id="upBar" onMouseDragged="#onUpBarDragged" onMousePressed="#onUpBarButtonPressed" prefHeight="33.0" prefWidth="1067.0" styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css" BorderPane.alignment="CENTER">
                     <children>
                         <Label layoutX="478.0" layoutY="3.0" prefHeight="7.0" prefWidth="128.0" text="FOOdIESTORE">
                             <textFill>
@@ -66,16 +66,21 @@
                                 <Font name="System Bold" size="20.0" />
                             </font>
                         </Button>
+                        <Button fx:id="aboutButton" layoutX="10.0" layoutY="262.0" mnemonicParsing="false" onAction="#aboutSystemBtn" prefHeight="44.0" prefWidth="171.0" styleClass="mybutton6" stylesheets="@../ControllerPackage/Style.css" text="Help">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Button>
                     </children>
                 </VBox>
             </left>
          <center>
-            <Label prefHeight="407.0" prefWidth="792.0" styleClass="HomePage-backgroundchef" stylesheets="@../ControllerPackage/Style.css" text="Welcome To FoodieStore&#10;  Best Burger and Pizza&#10;                  Store" BorderPane.alignment="CENTER">
+            <Label prefHeight="381.0" prefWidth="710.0" styleClass="HomePage-backgroundchef" stylesheets="@../ControllerPackage/Style.css" text="Welcome To FoodieStore" BorderPane.alignment="CENTER">
                <font>
-                  <Font name="Arial Narrow Bold" size="37.0" />
+                  <Font name="Arial Narrow Bold" size="40.0" />
                </font>
                <textFill>
-                  <LinearGradient endX="0.5428571428571429" endY="0.6" startX="0.047619047619047505">
+                  <LinearGradient endX="0.5428571428571429" endY="0.6" startX="0.46666666666666656">
                      <stops>
                         <Stop color="BLACK" />
                         <Stop color="BLACK" offset="0.051546391752577324" />
