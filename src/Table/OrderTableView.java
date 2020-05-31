@@ -1,12 +1,12 @@
 package Table;
 
-public class OderTableView {
+public class OrderTableView {
     String customerName;
     String purchaseDate;
     String amountPay;
     String orderId;
 
-    public OderTableView(String orderId, String customerName, String purchaseDate, String amountPay) {
+    public OrderTableView(String orderId, String customerName, String purchaseDate, String amountPay) {
         this.customerName = customerName;
         this.purchaseDate = purchaseDate;
         this.amountPay = amountPay;
