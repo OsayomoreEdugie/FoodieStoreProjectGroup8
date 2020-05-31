@@ -3,6 +3,7 @@ package DatabaseConnection;
 
 import javafx.scene.control.Alert;
 
+import javax.swing.*;
 import java.sql.*;
 
 
@@ -44,6 +45,21 @@ public class DbQueries extends DbConnector {
 
     }
 
+    public String getOrderId() {
+        String totalsql = "Select max(OrderId) from orders;";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(totalsql)) {
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    return resultSet.getString(1);
+                }
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e + "");
+            return null;
+        }
+        return null;
+    }
+
     public void deleteCart() {
         String sql = "delete from meals";
 
@@ -65,7 +81,6 @@ public class DbQueries extends DbConnector {
             AlertBox(e + "");
         }
     }
-
 
 
 }
