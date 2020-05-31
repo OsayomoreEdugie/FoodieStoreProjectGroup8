@@ -47,21 +47,20 @@ public class HomePageController extends Control {
         }
     }
 
-// Button to view about page
     @FXML
     private void aboutSystemBtn() {
         borderPane.setRight(null);
         newInterfaceChanges("about");
     }
     @FXML
-    private void onMenuButtonPressed() {// Button method to enter menu
+    private void onMenuButtonPressed() {
         borderPane.setRight(null);
         newInterfaceChanges("MainMenu");
 
     }
 
     @FXML
-    private void onCartButtonPressed() { // Cart button
+    private void onCartButtonPressed() {
         borderPane.setRight(null);
         newInterfaceChanges("Payment");
     }
