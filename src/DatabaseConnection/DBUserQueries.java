@@ -5,7 +5,7 @@ import javafx.scene.control.Alert;
 
 import java.sql.*;
 
-public class DBUserQueries  {
+public class DBUserQueries extends DbConnector {
 
     private Connection connection;
     private Statement statement;
@@ -14,6 +14,9 @@ public class DBUserQueries  {
 
     public DBUserQueries() {
         try {
+
+            this.connection = getConnection();
+//
 
         } catch (Exception e) {
             AlertBox(e + "");
@@ -60,19 +63,6 @@ public class DBUserQueries  {
             return false;
         }
     }
-    public void updateProducts(String name, String Price, String amount) {
-        String updatesql = "UPDATE  products SET AMMOUNT= ?, Price= ? WHERE NAME = ?";
-
-        try (PreparedStatement preparedStatement = connection.prepareStatement(updatesql)) {
-            System.out.println("testing steinf update 999");
-            preparedStatement.setString(1, amount);
-            preparedStatement.setString(2, Price);
-            preparedStatement.setString(3, name);
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            AlertBox(e + "");
-        }
-    }
 
     public boolean isProductExist(String name) {
 
@@ -112,6 +102,20 @@ public class DBUserQueries  {
 
     }
 
+    public void updateProducts(String name, String Price, String amount) {
+        String updatesql = "UPDATE  products SET AMMOUNT= ?, Price= ? WHERE NAME = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(updatesql)) {
+            System.out.println("testing steinf update 999");
+            preparedStatement.setString(1, amount);
+            preparedStatement.setString(2, Price);
+            preparedStatement.setString(3, name);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            AlertBox(e + "");
+        }
+    }
+
 
     public boolean passwordExists(String passwod, String email) {
         String passwordQuery = "SELECT * FROM users WHERE password = ? AND email = ?";
@@ -139,7 +143,6 @@ public class DBUserQueries  {
         try {
             userTablePreparedStatement(firstName, lastName, birthday, userName, password, email, phoneNumber, type,
                     street, city, zipCode, userQuery);
-
         } catch (Exception e) {
             AlertBox(e + "");
 
@@ -168,6 +171,7 @@ public class DBUserQueries  {
 
             preparedStatement.executeUpdate();
             AlertBox("Successfully Created Account Please Login");
+
 
         } catch (SQLException e) {
             AlertBox(e + "");
