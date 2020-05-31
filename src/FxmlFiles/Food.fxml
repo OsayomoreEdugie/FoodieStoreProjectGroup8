@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="908.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerPackage.MenuItemsController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="908.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerPackage.FoodController">
     <children>
         <ScrollPane prefHeight="608.0" prefWidth="908.0">
             <content>
@@ -18,7 +18,7 @@
                     <children>
                         <SplitPane layoutX="47.0" layoutY="39.0" orientation="VERTICAL" prefHeight="236.0" prefWidth="191.0">
                             <items>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                <AnchorPane fx:id="americanPizza" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                     <children>
                                         <ImageView fitHeight="132.0" fitWidth="196.0" layoutX="-2.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
@@ -35,14 +35,14 @@
                                                 <Font size="11.0" />
                                             </font>
                                         </Label>
-                                        <Button fx:id="btn1" alignment="CENTER" layoutX="56.0" layoutY="195.0" mnemonicParsing="false" styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css" text="Add To Cart" textFill="#fcfafa" />
+                                        <Button alignment="CENTER" layoutX="56.0" layoutY="195.0" mnemonicParsing="false" onAction="#APaddToCartBtn" styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css" text="Add To Cart" textFill="#fcfafa" />
                                     </children>
                                 </AnchorPane>
                             </items>
                         </SplitPane>
                         <SplitPane layoutX="250.0" layoutY="39.0" orientation="VERTICAL" prefHeight="236.0" prefWidth="191.0">
                             <items>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="172.0" prefWidth="110.0">
+                                <AnchorPane fx:id="vegPizza" minHeight="0.0" minWidth="0.0" prefHeight="172.0" prefWidth="110.0">
                                     <children>
                                         <ImageView fitHeight="132.0" fitWidth="196.0" layoutX="-2.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
@@ -59,7 +59,7 @@
                                                 <Font size="11.0" />
                                             </font>
                                         </Label>
-                                        <Button fx:id="btn2" alignment="CENTER" layoutX="56.0" layoutY="195.0" mnemonicParsing="false" styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css" text="Add To Cart" textFill="#fcfafa" />
+                                        <Button alignment="CENTER" layoutX="56.0" layoutY="195.0" mnemonicParsing="false" onAction="#VPaddToCartBtn" styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css" text="Add To Cart" textFill="#fcfafa" />
                                     </children>
                                 </AnchorPane>
                             </items>
@@ -83,7 +83,7 @@
                                                 <Font size="11.0" />
                                             </font>
                                         </Label>
-                                        <Button fx:id="btn3" alignment="CENTER" layoutX="56.0" layoutY="195.0" mnemonicParsing="false" styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css" text="Add To Cart" textFill="#fcfafa" />
+                                        <Button alignment="CENTER" layoutX="56.0" layoutY="195.0" mnemonicParsing="false" onAction="#CPaddToCartBtn" styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css" text="Add To Cart" textFill="#fcfafa" />
                                     </children>
                                 </AnchorPane>
                             </items>
@@ -107,7 +107,7 @@
                                                 <Font size="11.0" />
                                             </font>
                                         </Label>
-                                        <Button fx:id="btn4" alignment="CENTER" layoutX="56.0" layoutY="195.0" mnemonicParsing="false" styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css" text="Add To Cart" textFill="#fcfafa" />
+                                        <Button alignment="CENTER" layoutX="56.0" layoutY="195.0" mnemonicParsing="false" onAction="#PPaddToCartBtn" styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css" text="Add To Cart" textFill="#fcfafa" />
                                     </children>
                                 </AnchorPane>
                             </items>
@@ -131,7 +131,7 @@
                                                 <Font size="11.0" />
                                             </font>
                                         </Label>
-                                        <Button fx:id="btn5" alignment="CENTER" layoutX="56.0" layoutY="195.0" mnemonicParsing="false" styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css" text="Add To Cart" textFill="#fcfafa" />
+                                        <Button alignment="CENTER" layoutX="56.0" layoutY="195.0" mnemonicParsing="false" onAction="#VBaddToCartBtn" styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css" text="Add To Cart" textFill="#fcfafa" />
                                     </children>
                                 </AnchorPane>
                             </items>
@@ -155,7 +155,7 @@
                                                 <Font size="11.0" />
                                             </font>
                                         </Label>
-                                        <Button fx:id="btn6" alignment="CENTER" layoutX="56.0" layoutY="195.0" mnemonicParsing="false" styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css" text="Add To Cart" textFill="#fcfafa" />
+                                        <Button alignment="CENTER" layoutX="56.0" layoutY="195.0" mnemonicParsing="false" onAction="#CBaddToCartBtn" styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css" text="Add To Cart" textFill="#fcfafa" />
                                     </children>
                                 </AnchorPane>
                             </items>
@@ -179,7 +179,7 @@
                                                 <Font size="11.0" />
                                             </font>
                                         </Label>
-                                        <Button fx:id="btn7" alignment="CENTER" layoutX="56.0" layoutY="195.0" mnemonicParsing="false" styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css" text="Add To Cart" textFill="#fcfafa" />
+                                        <Button alignment="CENTER" layoutX="56.0" layoutY="195.0" mnemonicParsing="false" onAction="#PBaddToCartBtn" styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css" text="Add To Cart" textFill="#fcfafa" />
                                     </children>
                                 </AnchorPane>
                             </items>
@@ -203,7 +203,7 @@
                                                 <Font size="11.0" />
                                             </font>
                                         </Label>
-                                        <Button fx:id="btn8" alignment="CENTER" layoutX="56.0" layoutY="195.0" mnemonicParsing="false" styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css" text="Add To Cart" textFill="#fcfafa" />
+                                        <Button alignment="CENTER" layoutX="56.0" layoutY="195.0" mnemonicParsing="false" onAction="#SBaddToCartBtn" styleClass="HomePage-bg" stylesheets="@../ControllerPackage/Style.css" text="Add To Cart" textFill="#fcfafa" />
                                     </children>
                                 </AnchorPane>
                             </items>
