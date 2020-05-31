@@ -15,20 +15,20 @@ public class ProfileErrorHandling {
     }
 
 
-    public boolean mobileNumberIsNotNumbers(String mobileNumber) {
+    public boolean mobileNumber(String mobile) {
         boolean mobileError = false;
-        if (mobileNumber.length() >= 10) {
-            char firstElement = mobileNumber.charAt(0);
-            char secondElement = mobileNumber.charAt(1);
-            char thirdElement = mobileNumber.charAt(2);
-            char fourthElement = mobileNumber.charAt(3);
+        if (mobile.length() >= 10) {
+            char first = mobile.charAt(0);
+            char second = mobile.charAt(1);
+            char third = mobile.charAt(2);
+            char fourth = mobile.charAt(3);
 
-            if (mobileNumber.length() == 13) {
-                if (firstElement == '0' && secondElement == '0' && thirdElement == '4' && fourthElement == '6') {
+            if (mobile.length() == 13) {
+                if (first == '0' && second == '0' && third == '4' && fourth == '6') {
                     mobileError = false;
                 }
-            } else if (mobileNumber.length() == 10) {
-                if (firstElement == '0' && secondElement == '7') {
+            } else if (mobile.length() == 10) {
+                if (first == '0' && second == '7') {
                     mobileError = false;
                 }
             } else {
@@ -48,19 +48,7 @@ public class ProfileErrorHandling {
         return passwordError;
     }
 
-    public boolean cvcChecker(String cvc) {
-        boolean cvcMessage = false;
-        if (cvc.length() != 3)
-            cvcMessage = true;
-        return cvcMessage;
-    }
 
-    public boolean cardNumberChecker(String cardNumber) {
-        boolean cardNumberChecker = false;
-        if (cardNumber.length() != 16)
-            cardNumberChecker = true;
-        return cardNumberChecker;
-    }
 
     public boolean comboBoxes(ComboBox box) {
         if (box.getSelectionModel().isEmpty())
